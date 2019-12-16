@@ -13,9 +13,16 @@ var scrape = function (cb) {
 
         var articles = [];
 
+        // we are going to select all the theme summaries, 
+        // on each theme summary, grab the text and cut off  
+        // white space
+
         $(".theme-summary").each(function(i, element){
             var head = $(this).children(".story-heading").text().trim();
             var sum = $(this).children(".summary").text().trim();
+
+            // if head and sum exist, meaning the scraper was able 
+            // to get the text, execute the replace regex method
 
             if(head && sum){
                 var headNeat = head.replace(/(\r\n|\n|\r|\t|\s+)/gm, " ").trim();
