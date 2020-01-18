@@ -17,7 +17,8 @@ module.exports = {
                 articles[i].date = makeDate();
                 articles[i].saved = false;
             }
-
+// this is a mongo function, we are putting lots of 
+// articles into the headline collection
 Headline.collection.insertMany(articles, {ordered:false}, function(err, docs){
     cb(err,docs);
         });
@@ -26,6 +27,8 @@ Headline.collection.insertMany(articles, {ordered:false}, function(err, docs){
     delete: function(query, cb) {
         Headline.remove(query, cb);
     },
+    // with the delete funtion we can  
+    // delete an article
     get: function(query, cb) {
         Headline.find(query)
         .sort({
@@ -35,7 +38,7 @@ Headline.collection.insertMany(articles, {ordered:false}, function(err, docs){
             cb(doc);
         });
     },
-    // this function will update the articles
+    // this update function will update the articles
     update: function(query, cb) {
         Headline.update({_id: query._id}, {
             $set: query

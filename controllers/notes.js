@@ -21,7 +21,7 @@ module.exports = {
             date: makeDate(),
             noteText: data.noteText
         };
-
+// this will take the note and create a new one
     Note.create(newNote, function (err, doc) {
         if (err) {
             console.log(err);

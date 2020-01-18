@@ -38,38 +38,13 @@ body {
     left: 0;   
 }
 
-
-.navbar-inverse .navbar-nav>li>a.scrape-new:hover {
-    background: #4caf50;
-}
-
-.navbar-inverse .navbar-nav>li>a.scrape-new:active {
-    background: #e51c23;
-}
-
-.scrape-new {
-    cursor: pointer;
-}
-
-.m-top-80 {
-    margin-top: 80px;
-}
-
 textarea {
     resize: none;
     padding: 10px;
 }
 
-.bootbox-body .btn {
-    float: right;
-    margin: 5px;
-}
-
-.note.list-group-item {
-    padding: 30px;
-}
-
-.note.list-group-item .btn {
-    position: relative;
-    bottom: 10px;
+@media only screen and (min-width: 600px) {
+    img.img-fluid {
+      max-height: 3in;
+    }
 }

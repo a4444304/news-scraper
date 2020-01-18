@@ -13,5 +13,6 @@ var makeDate = function() {
 
     return formattedDate;
 };
-
+// here we have made a variable that creates the date
+// then we are exporting it
 module.exports = makeDate;
